@@ -11,6 +11,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/normalize.css"/>
         <style>
+            html,
+            body {
+                text-align: center;
+            }
+
+            a {
+                display: inline-block;
+                padding: 10px;
+            }
             #showbanner {
                 display: block;
                 width: 200px;
@@ -19,25 +28,7 @@
         </style>
     </head>
     <body>
-        <button id="showbanner">Показать баннер</button>
-
-        <!-- Example to use kinopoliten_bnr banner  -->
-        <script src="//localhost:8080/kinopoliten_bnr/kinopoliten_bnr.js"></script>
-        <script>
-            var banner = new window.KinopolitenBnr({
-                staticHost: location.origin,
-                classContainer: 'intercative-bnr',
-                autoInit: false,
-                canClose: true
-            });
-
-            var btn = document.getElementById('showbanner');
-            btn.addEventListener('click', function() {
-                banner.show();
-            });
-            btn.addEventListener('touchstart', function() {
-                banner.show();
-            });
-        </script>
+        <a href="demo/demo-autoinit.html">Пример: автоматическая инициализация</a>
+        <a href="demo/demo-initbyevent.html">Пример: инициализация по событию</a>
     </body>
 </html>
