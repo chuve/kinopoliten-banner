@@ -9,11 +9,11 @@
 
         /**
          * Default banner settings
-         * @type {{staticHost: string, appStoreLink: string, googlePlayLink: string, canClose: boolean, autoInit: boolean}}
+         * @type {{staticPath: string, appStoreLink: string, googlePlayLink: string, canClose: boolean, autoInit: boolean}}
          */
         var defaultOptions = {
             classContainer: 'cont',
-            staticHost: 'http://' + window.location.hostname,
+            staticPath: 'http://' + window.location.hostname,
             appStoreLink: 'https://itunes.apple.com/ru/app/kinopoliten/id949480166?mt=8',
             googlePlayLink: 'https://play.google.com/store/apps/details?id=ru.vmetro.kinohod',
             canClose: false,
@@ -21,9 +21,9 @@
         };
 
         var settings = extend(defaultOptions, options), // extended setting by custom options object
-            bannerHTML_iphone = '<div class="kinopoliten__wrapper"><img class="kinopoliten__logo-vmetro" src="'+ settings.staticHost +'/kinopoliten_bnr/images/vmetro-logo.png" width="117" height="101" alt="В МЕТРО" title="В МЕТРО"/><div class="kinopoliten__text-title">&laquo;Кинополитен&raquo; для iPhone</div><div class="kinopoliten__text-slogan">Покупайте билеты в кино без наценки!</div><img class="kinopoliten__poster" src="'+ settings.staticHost +'/kinopoliten_bnr/images/kinopoliten_iphone.png" alt="Билеты без наценки" title="Билеты без наценки"/><div class="kinopoliten__app-buttons"><a href="'+ settings.appStoreLink +'"><img src="'+ settings.staticHost +'/kinopoliten_bnr/images/apple-app_store_button.png" class="kinopoliten__app-button" alt="Загрузите в AppStore"/></a></div></div>', // html banner mark-up
-            bannerHTML_android = '<div class="kinopoliten__wrapper"><img class="kinopoliten__logo-vmetro" src="'+ settings.staticHost +'/kinopoliten_bnr/images/vmetro-logo.png" width="117" height="101" alt="В МЕТРО" title="В МЕТРО"/><div class="kinopoliten__text-title">&laquo;Кинополитен&raquo; для Android</div><div class="kinopoliten__text-slogan">Покупайте билеты в кино без наценки!</div><img class="kinopoliten__poster" src="'+ settings.staticHost +'/kinopoliten_bnr/images/kinopoliten_android.png" alt="Билеты без наценки" title="Билеты без наценки"/><div class="kinopoliten__app-buttons"><a href="'+ settings.googlePlayLink +'"><img src="'+ settings.staticHost +'/kinopoliten_bnr/images/google_play_button.png" class="kinopoliten__app-button" alt="Загрузите в AppStore"/></a></div></div>', // html banner mark-up
-            bannerHTML_both = '<div class="kinopoliten__wrapper"><img class="kinopoliten__logo-vmetro" src="'+ settings.staticHost +'/kinopoliten_bnr/images/vmetro-logo.png" width="117" height="101" alt="В МЕТРО" title="В МЕТРО"/><div class="kinopoliten__text-title">&laquo;Кинополитен&raquo; для iPhone и&nbsp;Android</div><div class="kinopoliten__text-slogan">Покупайте билеты в кино без наценки!</div><img class="kinopoliten__poster" src="'+ settings.staticHost +'/kinopoliten_bnr/images/kinopoliten.png" alt="Билеты без наценки" title="Билеты без наценки"/><div class="kinopoliten__app-buttons"><a href="'+ settings.appStoreLink +'"><img src="'+ settings.staticHost +'/kinopoliten_bnr/images/app_store.png" class="kinopoliten__app-button" alt="Загрузите в AppStore"/></a><a href="'+ settings.googlePlayLink +'"><img src="'+ settings.staticHost +'/kinopoliten_bnr/images/google_play.png" class="kinopoliten__app-button" alt="Загрузите на Google Play"/></a></div></div>', // html banner mark-up
+            bannerHTML_iphone = '<div class="kinopoliten__wrapper"><img class="kinopoliten__logo-vmetro" src="'+ settings.staticPath +'/kinopoliten_bnr/images/vmetro-logo.png" width="117" height="101" alt="В МЕТРО" title="В МЕТРО"/><div class="kinopoliten__text-title">&laquo;Кинополитен&raquo; для iPhone</div><div class="kinopoliten__text-slogan">Покупайте билеты в кино без наценки!</div><img class="kinopoliten__poster" src="'+ settings.staticPath +'/kinopoliten_bnr/images/kinopoliten_iphone.png" alt="Билеты без наценки" title="Билеты без наценки"/><div class="kinopoliten__app-buttons"><a href="'+ settings.appStoreLink +'"><img src="'+ settings.staticPath +'/kinopoliten_bnr/images/apple-app_store_button.png" class="kinopoliten__app-button" alt="Загрузите в AppStore"/></a></div></div>', // html banner mark-up
+            bannerHTML_android = '<div class="kinopoliten__wrapper"><img class="kinopoliten__logo-vmetro" src="'+ settings.staticPath +'/kinopoliten_bnr/images/vmetro-logo.png" width="117" height="101" alt="В МЕТРО" title="В МЕТРО"/><div class="kinopoliten__text-title">&laquo;Кинополитен&raquo; для Android</div><div class="kinopoliten__text-slogan">Покупайте билеты в кино без наценки!</div><img class="kinopoliten__poster" src="'+ settings.staticPath +'/kinopoliten_bnr/images/kinopoliten_android.png" alt="Билеты без наценки" title="Билеты без наценки"/><div class="kinopoliten__app-buttons"><a href="'+ settings.googlePlayLink +'"><img src="'+ settings.staticPath +'/kinopoliten_bnr/images/google_play_button.png" class="kinopoliten__app-button" alt="Загрузите в AppStore"/></a></div></div>', // html banner mark-up
+            bannerHTML_both = '<div class="kinopoliten__wrapper"><img class="kinopoliten__logo-vmetro" src="'+ settings.staticPath +'/kinopoliten_bnr/images/vmetro-logo.png" width="117" height="101" alt="В МЕТРО" title="В МЕТРО"/><div class="kinopoliten__text-title">&laquo;Кинополитен&raquo; для iPhone и&nbsp;Android</div><div class="kinopoliten__text-slogan">Покупайте билеты в кино без наценки!</div><img class="kinopoliten__poster" src="'+ settings.staticPath +'/kinopoliten_bnr/images/kinopoliten.png" alt="Билеты без наценки" title="Билеты без наценки"/><div class="kinopoliten__app-buttons"><a href="'+ settings.appStoreLink +'"><img src="'+ settings.staticPath +'/kinopoliten_bnr/images/app_store.png" class="kinopoliten__app-button" alt="Загрузите в AppStore"/></a><a href="'+ settings.googlePlayLink +'"><img src="'+ settings.staticPath +'/kinopoliten_bnr/images/google_play.png" class="kinopoliten__app-button" alt="Загрузите на Google Play"/></a></div></div>', // html banner mark-up
 
             self = this;
 
@@ -120,7 +120,7 @@
                 var bannerStyles = document.createElement('link');
                 bannerStyles.type = 'text/css';
                 bannerStyles.rel = 'stylesheet';
-                bannerStyles.href = settings.staticHost + '/kinopoliten_bnr/css/kinopoliten_bnr.css';
+                bannerStyles.href = settings.staticPath + '/kinopoliten_bnr/css/kinopoliten_bnr.css';
                 document.head.appendChild(bannerStyles);
                 this.status.cssLoad = true;
             }
