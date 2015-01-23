@@ -1,5 +1,5 @@
 # kinopoliten-banner
-Example use case
+Use Case Examples
 -------
 ### Autoinit ###
 Add into &lt;head> tag
