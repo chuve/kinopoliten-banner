@@ -24,7 +24,7 @@
 <!-- Example to use kinopoliten_bnr banner  -->
 <script src="../kinopoliten_bnr/kinopoliten_bnr.js"></script>
 <script>
-    var banner = new window.KinopolitenBnr({
+    var kinopoliten_bnr = new window.KinopolitenBnr({
         staticPath: location.origin + '/kinopoliten-banner',
         classContainer: 'intercative-bnr',
         autoInit: false,
@@ -33,10 +33,10 @@
 
     var btn = document.getElementById('showbanner');
     btn.addEventListener('click', function() {
-        banner.show();
+        kinopoliten_bnr.show();
     });
     btn.addEventListener('touchstart', function() {
-        banner.show();
+        kinopoliten_bnr.show();
     });
 </script>
 </body>

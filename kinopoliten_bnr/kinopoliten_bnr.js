@@ -142,7 +142,9 @@
         };
 
         if (settings.autoInit) {
-            this.init();
+            window.onload = function(){
+                self.init();
+            }
         }
 
         // public banner api
