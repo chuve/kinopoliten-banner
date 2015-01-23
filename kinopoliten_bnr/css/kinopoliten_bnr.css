@@ -1,0 +1,75 @@
+.kinopoliten__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 10px;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialised;
+    font-size: 16px;
+    text-align: center;
+    background: #ffffff;
+}
+.kinopoliten__logo-vmetro {
+    margin: 0 auto 30px auto;
+}
+.kinopoliten__text-title {
+    font-size: 2.28875em;
+    font-weight: bold;
+}
+.kinopoliten__text-slogan {
+    font-size: 1.40125em;
+    padding: 5px 0;
+}
+.kinopoliten__poster {
+    display: block;
+    width: 100%;
+    max-width: 611px;
+    margin: 50px auto;
+}
+.kinopoliten__app-buttons {
+    font-size: 0;
+    line-height: 0;
+    padding-bottom: 30px;
+}
+
+.kinopoliten__close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    font-size: 30px;
+    border: 1px solid #ccc;
+    color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 620px) {
+    .kinopoliten__wrapper {
+        font-size: 12px;
+    }
+    .kinopoliten__poster {
+        margin: 25px auto;
+    }
+
+    .kinopoliten__app-button{
+        width: 50%;
+    }
+
+    .kinopoliten__close-icon {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        line-height: 23px;
+        font-size: 15px;
+        border: 1px solid #ccc;
+        color: #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}

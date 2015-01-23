@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>kinopoliten_bnr</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css"/>
+        <style>
+            #showbanner {
+                display: block;
+                width: 200px;
+                margin: 50px auto;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="showbanner">Показать баннер</button>
+
+        <!-- Example to use kinopoliten_bnr banner  -->
+        <script src="//localhost:8080/kinopoliten_bnr/kinopoliten_bnr.js"></script>
+        <script>
+            var banner = new window.KinopolitenBnr({
+                staticHost: '//localhost:8080',
+                classContainer: 'intercative-bnr',
+                autoInit: false,
+                canClose: true
+            });
+
+            var btn = document.getElementById('showbanner');
+            btn.addEventListener('click', function() {
+                banner.show();
+            });
+            btn.addEventListener('touchstart', function() {
+                banner.show();
+            });
+        </script>
+    </body>
+</html>
