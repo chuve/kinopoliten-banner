@@ -12,11 +12,11 @@
          * @type {{staticHost: string, appStoreLink: string, googlePlayLink: string, canClose: boolean, autoInit: boolean}}
          */
         var defaultOptions = {
-            classContainer: 'cont',
-            staticHost: 'http://' + window.location.hostname,
+            classContainer: 'banner_kinopoliten',
+            staticHost: 'http://cdn.vmet.ro/html5_bnr/',
             appStoreLink: 'https://itunes.apple.com/ru/app/kinopoliten/id949480166?mt=8',
             googlePlayLink: 'https://play.google.com/store/apps/details?id=ru.vmetro.kinohod',
-            canClose: false,
+            canClose: true,
             autoInit: true
         };
 
@@ -157,4 +157,6 @@
             }
         }
     };
+
+    window.KinopolitenBnr({});
 })(window);

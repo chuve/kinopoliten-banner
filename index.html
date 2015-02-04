@@ -19,25 +19,7 @@
         </style>
     </head>
     <body>
-        <button id="showbanner">Показать баннер</button>
-
         <!-- Example to use kinopoliten_bnr banner  -->
         <script src="kinopoliten_bnr/kinopoliten_bnr.js"></script>
-        <script>
-            var banner = new window.KinopolitenBnr({
-                staticHost: location.origin,
-                classContainer: 'intercative-bnr',
-                autoInit: false,
-                canClose: true
-            });
-
-            var btn = document.getElementById('showbanner');
-            btn.addEventListener('click', function() {
-                banner.show();
-            });
-            btn.addEventListener('touchstart', function() {
-                banner.show();
-            });
-        </script>
     </body>
 </html>
