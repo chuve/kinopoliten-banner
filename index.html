@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]     <html class="no-js lt-ie9 lt-ie8 lt-ie7"<![endif]-->
+<!--[if IE 7]        <html class="no-js lt-ie9 lt-ie8"<![endif]-->
+<!--[if IE 8]        <html class="no-js lt-ie9"<![endif]-->
+<!--[if gt IE 8]><!--<html class="no-js"<!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +11,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/normalize.css"/>
         <style>
+            body {
+                height: 2000px;
+                background: black;
+            }
+
             #showbanner {
                 display: block;
                 width: 200px;
@@ -19,7 +24,13 @@
         </style>
     </head>
     <body>
-        <!-- Example to use kinopoliten_bnr banner  -->
-        <script src="kinopoliten_bnr/kinopoliten_bnr.js"></script>
+        <script>
+            (function(D,U){
+                  var s=D.createElement('script');
+                  s.type='text/javascript';
+                  s.src=U;
+                  D.getElementsByTagName('head')[0].appendChild(s);
+                })(window.parent.document,'kinopoliten_bnr/kinopoliten_bnr.js');
+        </script>
     </body>
 </html>

@@ -13,7 +13,7 @@
          */
         var defaultOptions = {
             classContainer: 'banner_kinopoliten',
-            staticHost: 'http://cdn.vmet.ro/html5_bnr/',
+            staticHost: window.location.href,
             appStoreLink: 'https://itunes.apple.com/ru/app/kinopoliten/id949480166?mt=8',
             googlePlayLink: 'https://play.google.com/store/apps/details?id=ru.vmetro.kinohod',
             canClose: true,
@@ -61,7 +61,7 @@
             if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
                 return 'ios';
             }
-        }
+        };
 
         /**
          * add banner to DOM
@@ -142,7 +142,7 @@
         };
 
         if (settings.autoInit) {
-            window.onload = function(){
+            window.onload = function() {
                 self.init();
             }
         }
@@ -158,5 +158,9 @@
         }
     };
 
-    window.KinopolitenBnr({});
+    new window.KinopolitenBnr({
+        autoInit: true,
+        canClose: true,
+        staticHost: 'http://cdn.vmet.ro/html5_bnr'
+    });
 })(window);
